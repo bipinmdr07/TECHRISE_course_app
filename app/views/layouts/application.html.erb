@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Dosis:200,400,600,700|Open+Sans" rel="stylesheet">
   <title>TECHRISECourseApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Karla|Open+Sans|Pacifico|Wendy+One" rel="stylesheet">
 </head>
 <body>
 
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapses" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a href="#" class="navbar-brand">Ideator</a>
+  <div id="wrap">
+
+    <%= render 'shared/nav' %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </div>
 
-  <ul>
-    <li><a href="#">Ideas</a></li>
-    <li><a href="#">Inspire Me</a></li>
-    <li><a href="#">About</a></li>
-  </ul>
-
-<%= yield %>
+  <%= render 'shared/footer' %>
 
 </body>
 </html>
