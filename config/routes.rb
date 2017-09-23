@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'about' => 'static_pages/about'
+
+  get 'random' => 'static_pages/random'
+
   root 'ideas#index'
 
   resources :ideas
