@@ -1,2 +1,17 @@
-<h1>StaticPages#random</h1>
-<p>Find me in app/views/static_pages/random.html.erb</p>
+<% if @idea.present? %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <blockquote>
+        <p><%= @idea.description %></p>
+        <small>by <%= @idea.author %></small>
+      </blockquote>
+      <br>
+      <div class="btn-group" role="group">
+        <%= link_to 'Delete', idea_path(@idea), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %>
+        <%= link_to 'Revise', edit_idea_path(@idea), class: 'btn btn-sm btn-success' %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <h4>No ideas have been shared. Add one <%= link_to 'here', root_path %></h4>
+<% end %>

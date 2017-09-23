@@ -29,12 +29,14 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <blockquote>
-        <h3><%= idea.description %></h3>
-        <h4><%= idea.author %></h4>
+        <p><%= idea.description %></p>
+        <small>by <%= idea.author %></small>
       </blockquote>
       <br>
-      <%= link_to 'Delete', idea_path(idea), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: 'Are you sure?'} %>
-      <%= link_to 'Revise', edit_idea_path(idea), class: 'btn btn-sm btn-success' %>
+      <div class="btn-group" role="group">
+        <%= link_to 'Delete', idea_path(idea), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: 'Are you sure?'} %>
+        <%= link_to 'Revise', edit_idea_path(idea), class: 'btn btn-sm btn-success' %>
+      </div>
     </div>
   </div>
 <% end %>
