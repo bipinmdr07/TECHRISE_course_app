@@ -2,6 +2,7 @@
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Add Idea
 </button>
+<br>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -34,8 +35,8 @@
       </blockquote>
       <br>
       <div class="btn-group" role="group">
-        <%= link_to 'Delete', idea_path(idea), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: 'Are you sure?'} %>
-        <%= link_to 'Revise', edit_idea_path(idea), class: 'btn btn-sm btn-success' %>
+        <%= link_to '<span class="glyphicon glyphicon-trash></span>'.html_safe, idea_path(idea), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: 'Are you sure?'} %>
+        <%= link_to '<span class="glyphicon glyphicon-pencil"></span>'.html_safe, edit_idea_path(idea), class: 'btn btn-sm btn-success' %>
       </div>
     </div>
   </div>

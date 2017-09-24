@@ -5,7 +5,7 @@ $footer-height: 45px;
 
 .navbar-default {
   font-family: $secondary-font;
-  background-color: white;
+  background-color: #e8e88c;
 
   .navbar-brand {
     font-weight: 100;
@@ -18,6 +18,34 @@ $footer-height: 45px;
 html, body {
   font-family: $primary-font;
   height: 100%;
+}
+
+body {
+  background-image: url('4.jpg');
+  background-attachment: fixed;
+
+  .btn-primary {
+    margin-bottom: 10px;
+  }
+}
+
+.panel-body {
+  background-color: #96c7ff;
+  p{
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+
+  small {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}
+
+.btn-group {
+  float: right;
 }
 
 .nav {
@@ -37,4 +65,6 @@ html, body {
 // fixed height of footer
 .footer {
   height: $footer-height;
+  background-color: #ffd27d;
+  padding: 10px;
 }
