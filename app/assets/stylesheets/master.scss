@@ -29,6 +29,10 @@ body {
   }
 }
 
+.show-on-hover {
+  display: none;
+}
+
 .panel-body {
   background-color: #96c7ff;
   p{
@@ -46,6 +50,11 @@ body {
 
 .btn-group {
   float: right;
+  a:hover {
+    .show-on-hover {
+      display: inline-block;
+    }
+  }
 }
 
 .nav {
